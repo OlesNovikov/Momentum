@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing:  border-box;
+}
+
+:root {
+    font-size: 10px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    letter-spacing: 0.06em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center center;
+    transition: background-image 1s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.button {
+    background: url("../assets/img/update-background-button.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: grayscale(1);
+    width: 2rem;
+    height: 2rem;
+    border: none;
+}
+
+.change-background {
+    width: 6rem;
+    height: 6rem;
+    margin-left: 10%;
+}
+
+.button:hover {
+    filter: grayscale(.8);
+}
+
+.button:active,
+.button:focus {
+    outline: 0;
+}
+
+.button:active{
+    transform: scale(1.02)
+}
+
+.time {
+    font-size: 10rem;
+    font-weight: bold;
+}
+
+.date {
+    font-size: 2rem;
+    font-weight: normal;
+    margin-bottom: 2rem;
+}
+
+.greeting {
+    font-size: 3.2rem;
+    margin-bottom: 4rem;
+}
+
+.focus {
+    font-size: 2.4rem;
+    margin-bottom: 0.8rem;
+    color: #DFDFDF;
+}
+
+.quote {
+    font-size: 1.8rem;
+    margin: 0;
+    margin-bottom: 1rem;
+    background: #eee;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 70%;
+    color: black;
+  }
+  .quote figcaption,
+  .quote blockquote {
+    margin: 1rem;
+  }
+  .quote figcaption {
+    text-align: right;
+  }
+
+.next-quote {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 1rem;
+}
+
+.weather-info_change-background {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10%;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+}
+
+.weather-info__item {
+    padding-bottom: 0.5rem;
+}
+
+.city {  
+    border: 0.1rem solid #cccccc;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.temperature {    
+    font-size: 2rem;
+}
+
+.weather-description {
+    font-size: 1.5rem;
+}
+
+.weather-icon::before{
+    font-size: 5rem;
+    color: white;
+}
+
+.weather-icon:hover {
+    animation: shake 1.5s;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+}
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+    .change-background {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .weather-icon::before {
+        font-size: 4rem;
+    }
+
+    .weather-info_change-background {
+        margin: 0;
+    }
+
+    .city {
+        padding: 0.1rem 0;
+    }
+
+    .temperature {
+        font-size: 2rem;
+    }
+
+    .weather-description {
+        font-size: 1.8rem;
+    }
+
+    .wind-speed,
+    .humidity,
+    .quote {
+        font-size: 1.4rem;
+    }
+    
+    .time {
+        font-size: 6rem;
+    }
+
+    .date {
+        font-size: 1.5rem;
+    }
+
+    .greeting {
+        font-size: 2.5rem;
+        margin-bottom: 2.8rem;
+    }
+
+    .focus {
+        font-size: 1.5rem;
+    }
+
+    .quote figcaption, .quote blockquote {
+        margin: 0.5rem;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .change-background {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .weather-icon::before {
+        font-size: 2rem;
+    }
+
+    .weather-info_change-background {
+        margin: 0;
+    }
+
+    .city {
+        padding: 0.1rem 0;
+    }
+
+    .temperature {
+        font-size: 1.8rem;
+    }
+
+    .weather-description {
+        font-size: 1.5rem;
+    }
+
+    .wind-speed,
+    .humidity,
+    .quote {
+        font-size: 1.4rem;
+    }
+    
+    .time {
+        font-size: 5rem;
+    }
+
+    .date {
+        font-size: 1.5rem;
+    }
+
+    .greeting {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .focus {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .quote figcaption, .quote blockquote {
+        margin: 0.5rem;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .change-background {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .city {
+        padding: 0.3rem 0;
+        font-size: 1.4rem;
+    }
+
+    .temperature {
+        font-size: 1.5rem;
+    }
+
+    .weather-icon::before {
+        font-size: 4rem;
+    }
+    
+    .time {
+        font-size: 7rem;
+    }
+
+    .date,
+    .focus {
+        font-size: 1.8rem;
+    }
+
+    .greeting {
+        font-size: 2rem;
+    }
+
+    .quote,
+    .wind-speed,
+    .humidity {
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    .change-background {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .city {
+        padding: 0.3rem 0;
+        font-size: 1.4rem;
+    }
+
+    .temperature {
+        font-size: 1.5rem;
+    }
+
+    .weather-icon::before {
+        font-size: 4rem;
+    }
+    
+    .time {
+        font-size: 9rem;
+    }
+
+    .date,
+    .focus {
+        font-size: 1.8rem;
+    }
+
+    .greeting {
+        font-size: 2rem;
+    }
+
+    .quote,
+    .wind-speed,
+    .humidity {
+        font-size: 1.4rem;
+    }
+}
